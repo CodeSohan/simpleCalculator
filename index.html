@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+<style type="text/css">
+    .container{
+        position:relative;
+    }
+</style>
+</head>
+<body bgcolor="#d34fg1" #303030" >
+   <div class="container" style="color:white;">
+       <table cellpadding="15">
+       <tbody>
+        <tr>
+            <td> <label>Enter First Number</label></td>
+            <td><input type="number" name="fn" id="fnumber"></td>
+        </tr>
+        <tr>
+           <td> <label>Enter Second Number</label></td>
+           <td><input type="number" name="ln" id="lnumber"></td>
+        </tr>
+        <tr>
+            <td>  <label>Operation</label></td>
+            <td>
+            <select name="sign" id="sign">
+                <option value="" selected>-Select Operation-</option><!---->
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </td>
+         </tr>
+         <tr>
+             <td><label><strong>Result :</strong></label></td>
+            <td><h3 id="result"></h3></td> 
+         </tr>
+         <tr>
+             <td><button onclick="execute()">Show Op</button></td>
+         </tr>
+       </tbody>
+    </table>
+    </div>
+    <script>
+    
+function execute(){
+    let getSign=document.getElementById("sign").value;
+    
+    let getFnum=document.getElementById("fnumber").value;
+
+    let getLnum=document.getElementById("lnumber").value;   
+
+
+    switch(getSign){
+        case '+':
+            result=parseFloat(getFnum)+parseFloat(getLnum);
+            break;
+        case '-':
+                result=parseFloat(getFnum)-parseFloat(getLnum);
+                break; 
+
+        case '*':
+                result=parseFloat(getFnum)*parseFloat(getLnum);
+                break;
+
+        case '/':
+              result=parseFloat(getFnum)/parseFloat(getLnum);
+              break;
+    
+    }
+   
+     let show=document.getElementById("result").innerHTML=result;
+     
+     console.log(result);
+        }
+    </script>
+</body>
+</html>
+
+
+
+     
+
+     
+    
