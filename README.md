@@ -1,2 +1,2 @@
-# simpleCalculator
-This a small calculator.
+# simpleCalculato
+A simplecalculator.
