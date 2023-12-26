@@ -1,2 +1,2 @@
-# simpleCalculato
+# simpleCalculator
 A simplecalculator.
